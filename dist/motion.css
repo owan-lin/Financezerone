@@ -1,0 +1,19 @@
+:root{--motion-ease:cubic-bezier(.22,1,.36,1)}
+.nav-item,.choice-trigger,.record,.table-edit,.day-navigation button,.small-add,.icon-button,.today-button,.currency-tabs button,.heatmap button,.composition-legend button{transition:background-color 180ms ease,color 180ms ease,box-shadow 180ms ease,transform 240ms var(--motion-ease)}
+.nav-item:active,.icon-button:active,.small-add:active,.today-button:active,.currency-tabs button:active{transform:scale(.95)}
+.record:hover{background:var(--surface-fill);border-radius:8px;transform:translateX(3px)}
+.choice-menu{animation:choice-reveal 180ms var(--motion-ease);transform-origin:top}.choice-menu [role=option]{transition:background-color 120ms ease,color 120ms ease}.choice-menu [role=option]:active{background:var(--surface-strong)}
+.quick-tray{animation:none}.quick-tabs button{transition:padding 280ms var(--motion-ease),background-color 180ms ease,color 180ms ease}.quick-tabs span{transition:max-width 280ms var(--motion-ease),opacity 180ms ease,margin 280ms var(--motion-ease)}.quick-tabs svg{transition:transform 280ms var(--motion-ease)}.quick-tabs [aria-selected=true] svg{transform:scale(1.08)}
+.daily-progress>span{transition:width 450ms var(--motion-ease)}.preset-row:before{transition:transform 320ms var(--motion-ease),background-color 180ms ease}.column-fill{transform-origin:center bottom;transition:background-color 180ms ease}.segmented-share span{transform-origin:left center}.heatmap button:hover{transform:translateY(-2px) scale(1.04)}
+.chart-tooltip{animation:tooltip-reveal 140ms ease-out}.summary-disclosure>summary svg{transition:transform 280ms var(--motion-ease)}
+dialog::backdrop{animation:backdrop-reveal 240ms ease-out}dialog.is-closing::backdrop{opacity:0;transition:opacity 170ms ease-out}
+#toast{transition:opacity 220ms ease,transform 320ms var(--motion-ease)}
+@property --ring{syntax:'<percentage>';inherits:false;initial-value:0%}
+.budget-ring,.mini-ring{transition:--ring 650ms var(--motion-ease)}
+@starting-style{.budget-ring,.mini-ring{--ring:0%!important}}
+@keyframes choice-reveal{from{opacity:0;transform:translateY(-5px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes tooltip-reveal{from{opacity:0;margin-bottom:-3px}to{opacity:1;margin-bottom:0}}
+@keyframes backdrop-reveal{from{background-color:#0000;backdrop-filter:blur(0)}to{background-color:#0005;backdrop-filter:blur(2px)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.record:hover,.heatmap button:hover{transform:none}.motion-ghost{display:none}}
+@media(max-width:1000px){#quick-form{flex:1 0 100%}}
+@media(max-width:540px){.quick-tabs{flex-basis:100%}.quick-tray{gap:14px}#quick-form{display:grid;grid-template-columns:80px minmax(0,1fr);gap:10px}#quick-date{grid-column:1/-1}#quick-form input{width:100%;background:white;border:0;border-radius:8px;padding:10px 12px}#quick-form #quick-note{grid-column:1/-1}#quick-form .primary{grid-column:2;justify-self:end}#quick-form .choice{width:100%}#quick-form .choice-trigger{background:white}}

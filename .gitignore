@@ -1,0 +1,10 @@
+node_modules/
+output/
+*.tar.gz
+*.tgz
+.openai/
+.env
+.env.*
+!.env.example
+hub/apps.json
+*.log

@@ -1,0 +1,1 @@
+{"name":"dayledger","version":"1.0.0","private":true,"scripts":{"start":"node server.js","hub":"node hub/server.cjs","check":"node --check dist/app.js && node --check hub/server.cjs && node --check hub/public/hub.js"}}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#ffffff"><title>Zerone · 个人工作台</title><link rel="stylesheet" href="/hub.css"><script src="/hub.js" defer></script></head>
+<body>
+<header class="header">
+  <a class="brand" href="/" aria-label="Zerone 工作台首页">Zerone</a>
+  <nav aria-label="工作台导航"><button class="nav active" data-select="uw">学习空间</button><button class="nav" data-select="finance">财务空间</button></nav>
+</header>
+<main class="showcase" aria-label="应用展示">
+  <section class="slide active" id="slide-uw" aria-labelledby="title-uw">
+    <div class="art campus-art" aria-hidden="true"><div class="art-underlay"></div><div class="board-dots"></div><img class="keyvisual" src="/uw-oc-final.png" alt="" fetchpriority="high"></div>
+    <div class="detail">
+      <h1 id="title-uw">我的学期</h1><p class="english-title">UWMaster</p>
+      <div class="detail-copy"><p class="description">课程待办 · 学期日历 · 课程检索</p><div class="launch-row"><button class="open-app" data-app="uw"><span>进入学习面板</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></button><span class="status" data-status="uw">正在检查…</span></div></div>
+    </div>
+  </section>
+  <section class="slide" id="slide-finance" aria-labelledby="title-finance" hidden>
+    <div class="art finance-art" aria-hidden="true"><div class="art-underlay"></div><div class="board-dots"></div><img class="keyvisual" src="/finance-oc-smooth.png?v=open-eyes" alt=""></div>
+    <div class="detail">
+      <h1 id="title-finance">日迹</h1><p class="english-title">Financizerone</p>
+      <div class="detail-copy"><p class="description">日历记账 · 美元 / 人民币</p><div class="launch-row"><button class="open-app" data-app="finance"><span>进入财务面板</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></button><span class="status" data-status="finance">正在检查…</span></div></div>
+    </div>
+  </section>
+  <div class="switcher">
+    <button class="arrow" id="previous" aria-label="上一个应用"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
+    <div class="app-tabs" role="tablist" aria-label="选择应用">
+      <button class="app-tab selected" id="tab-uw" data-select="uw" role="tab" aria-label="UWMaster 学习空间" aria-controls="slide-uw" aria-selected="true"><span class="thumb uw-thumb"></span></button>
+      <button class="app-tab" id="tab-finance" data-select="finance" role="tab" aria-label="Financizerone 财务空间" aria-controls="slide-finance" aria-selected="false" tabindex="-1"><span class="thumb finance-thumb"></span></button>
+    </div>
+    <button class="arrow" id="next" aria-label="下一个应用"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button>
+  </div>
+  <div class="page-switch" role="group" aria-label="页面切换">
+    <button data-select="uw" class="page-number active" aria-label="第 1 页：学习空间" aria-current="page">1</button>
+    <span class="page-track" aria-hidden="true"><span></span></span>
+    <button data-select="finance" class="page-number" aria-label="第 2 页：财务空间">2</button>
+  </div>
+  <p id="message" role="status" aria-live="polite"></p>
+</main>
+</body>
+</html>

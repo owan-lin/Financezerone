@@ -1,0 +1,11 @@
+# 配图清晰度增强
+
+使用内置 imagegen 工具对已认可的两张配图做细节增强；动作和构图保留。输出保存到 `public/uw-oc-crisp.png` 和 `public/finance-oc-crisp.png`，均为 1536 × 1024 透明 PNG。请求更高分辨率，但工具实际返回尺寸未增加；这是线条与局部对比增强，不是原生 3K / 4K 素材。原版本保留。移除网页主视觉不必要的 CSS 投影滤镜。
+
+## P1 最终提示词
+
+Use case: identity-preserve. Resolution restoration of the provided APPROVED transparent anime illustration, not a redesign. Upscale to 3072 x 2048 or higher, preserving the exact 3:2 canvas, exact silhouette, pose, facial identity, outfit, object locations, framing, pastel palette and delicate cel-shaded drawing style. Reconstruct crisp fine linework, individual white hair strands, clearly delineated cyan-grey irises and eyelashes, fingers, fabric seams, hoodie zipper, notebook page edges and sneaker laces. Preserve the existing male character's leaping pose and limb proportions exactly. Keep fine tonal transitions and soft colors, but remove low-resolution softness. Clean controlled high-resolution illustration edges, no oversharpening halos, no added texture or photorealism. Preserve transparent background and semi-transparent cyan props; no opaque background, no matte, no extra props, no changed character or composition, no text. Return a genuinely higher pixel resolution production asset, ideally 3072x2048, rather than simply adding detail at the same resolution.
+
+## P2 最终提示词
+
+Use case: identity-preserve. Carefully restore clarity of this approved transparent anime illustration. Preserve exact female character identity, face proportions, seated pose, silhouette, flower hair ornaments, clothing, shoes, notebook and pen, all floating devices and calendar panels, exact object positions and 3:2 framing. Preserve matching delicate pale blue-grey cel-shaded style. Improve the fine clean ink contours and their local contrast, clearly defined irises and eyelashes, fine flowing silver hair strands, fingers, hoodie seams and zipper teeth, planner edges and sneaker laces. Remove low-resolution softness while retaining soft pastel shading. Request highest available output resolution, ideally 3072x2048 or higher. No thick outlines, oversharpened halos, invented texture, realism, style changes, additional props, text, changed pose or changed framing. Fully transparent background and clean semi-transparent cyan elements. This is clarity enhancement of the same final website asset, not a new character drawing.
